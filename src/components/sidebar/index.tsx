@@ -2,13 +2,15 @@
 import Image from "next/image"
 import Link from "next/link"
 import logo from '@/assets/logo.png'
-import { Calendar, Heart, Home, LogOut, MessageCircle, Settings, TrendingUp, Users } from "lucide-react"
+import { Calendar, Heart, Home, LogIn, LogOut, MessageCircle, Settings, TrendingUp, Users } from "lucide-react"
 import { usePathname } from "next/navigation"
 
 const SideBar = ({ drawer, onClose }: { drawer?: boolean, onClose?: () => void }) => {
     const pathName = usePathname()
+    const token = '1'
+    if (pathName === '/login') return null
     return (
-        <div className={`max-w-xs w-full p-8 flex-col justify-between ${drawer ? 'flex h-full' : 'hidden xl:flex shadow-sidebar'}`}>
+        <div className={`max-w-xs w-full p-8 h-screen flex-col justify-between ${drawer ? 'flex h-full' : 'hidden xl:flex shadow-sidebar'}`}>
             <div>
                 <Link onClick={onClose} href='/'>
                     <Image src={logo.src} alt="logo" width={120} height={50} />
@@ -26,28 +28,22 @@ const SideBar = ({ drawer, onClose }: { drawer?: boolean, onClose?: () => void }
                 </div>
             </div>
             <div className="flex flex-col gap-4 pt-32">
-                <Link onClick={onClose} href='/community'
-                    className={` ${pathName === '/community' && 'font-semibold text-primary'} flex items-center gap-4 hover:text-primary duration-250 py-1`}
-                >
-                    <Users width={22} /> Community
-                </Link >
-                <Link onClick={onClose} href='/social'
-                    className={` ${pathName === '/social' && 'font-semibold text-primary'} flex items-center gap-4 hover:text-primary duration-250 py-1`}
-                >
-                    <MessageCircle width={22} /> Social
-                </Link >
-            </div>
-            <div className="flex flex-col gap-4 pt-32">
                 <Link onClick={onClose} href='/settings'
                     className={` ${pathName === '/settings' && 'font-semibold text-primary'} flex items-center gap-4 hover:text-primary duration-250 py-1`}
                 >
                     <Settings width={22} /> Settings
                 </Link >
-                <p
-                    className={`flex items-center gap-4 hover:text-primary duration-250 py-1 cursor-pointer`}
-                >
-                    <LogOut width={22} /> Log Out
-                </p >
+                {
+                    token ?
+                        <p className={`flex items-center gap-4 hover:text-primary duration-250 py-1 cursor-pointer`}>
+                            <LogOut width={22} /> Log Out
+                        </p >
+                        :
+                        <Link href='/login' className={`flex items-center gap-4 hover:text-primary duration-250 py-1 cursor-pointer`}>
+                            <LogIn width={22} /> Log In
+                        </Link>
+
+                }
             </div>
         </div>
     )

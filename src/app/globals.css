@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  @apply max-w-7xl mx-auto;
-}
-
 ::selection {
   @apply bg-primary text-white;
 }

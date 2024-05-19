@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} dark overflow-hidden bg-background text-foreground min-h-screen flex w-full`}>
         <SideBar />
-        <div className="w-full px-4 md:px-8">
+        <div className="w-full px-4 md:px-8 max-h-screen overflow-auto">
           <Header />
           <div className="pt-4">
             {children}

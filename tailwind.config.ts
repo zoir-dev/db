@@ -9,9 +9,26 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        sidebar: "2px 0px 90px 0px rgba(0, 111, 238, 0.4)",
+      },
+    },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {},
+        },
+        dark: {
+          colors: {
+            background: "#020817",
+          },
+        },
+      },
+    }),
+  ],
 };
 export default config;

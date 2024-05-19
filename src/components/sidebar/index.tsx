@@ -2,7 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import logo from '@/assets/logo.png'
-import { Calendar, Group, Heart, Home, LogOut, MessageCircle, Settings, TrendingUp, Users } from "lucide-react"
+import { Calendar, Heart, Home, LogOut, MessageCircle, Settings, TrendingUp, Users } from "lucide-react"
 import { usePathname } from "next/navigation"
 
 const SideBar = ({ drawer, onClose }: { drawer?: boolean, onClose?: () => void }) => {

@@ -29,10 +29,10 @@ const Drawer = ({ open, setOpen }: thisProps) => {
     }, [open]);
     return ReactDOM.createPortal(
         <div id='drawer'>
-            <div className={`fixed z-[-1] w-screen bottom-0 h-full duration-500 drawer 
-                ${open ? 'backdrop-blur-md !z-40' : 'opacity-0'}`}
+            <div className={`fixed z-[-1] w-full top-0 bottom-0 h-full duration-500 drawer 
+                ${open ? 'backdrop-blur-md !z-[1000]' : 'opacity-0'}`}
             />
-            <div className={`fixed shadow-sidebar max-w-xs w-full !z-[1000] !duration-500 h-[100vh] top-0 left-0 flex flex-col gap-[16px] items-center ${open ? 'translate-x-[0px] duration-400' : '-translate-x-[350px]'} bg-background`}>
+            <div className={`fixed shadow-sidebar max-w-xs w-full !z-40 !duration-500 h-[100vh] top-0 left-0 flex flex-col gap-[16px] items-center ${open ? 'translate-x-[0px] duration-400' : '-translate-x-[350px]'} bg-background`}>
                 <div className={open ? 'w-full !z-40 h-full' : 'hidden'}>
                     <SideBar drawer={true} onClose={() => setOpen(false)} />
                 </div>

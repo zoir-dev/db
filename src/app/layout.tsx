@@ -22,7 +22,7 @@ export default function RootLayout({
         <SideBar />
         <div className="w-full px-4 md:px-8 max-h-screen overflow-auto">
           <Header />
-          <div className="pt-4">
+          <div className="pt-4 pb-6">
             {children}
           </div>
         </div>

@@ -17,7 +17,7 @@ const MovieCard = ({ href, index, liked }: { href: string, index: number, liked?
                         <Heart width={25} />
                     }
                 </Button>
-                <NextImage as={Image} src={`https://picsum.photos/${800 + index}`} loading='lazy' radius='none' alt='rasm' className='w-full h-auto object-cover aspect-[5/3]' width={580} height={448} />
+                <NextImage as={Image} src={`https://picsum.photos/${800 + index}`} radius='none' alt='rasm' className='w-full h-auto object-cover aspect-[5/3]' width={580} height={448} />
                 <div className='p-4 flex flex-col gap-4'>
                     <h3 className='font-semibold text-xl'>Gumroh</h3>
                     <p className='text-default-500 text-base'>
@@ -34,7 +34,7 @@ const MovieCard = ({ href, index, liked }: { href: string, index: number, liked?
                         }
                     </div>
                     <Button fullWidth color='primary' variant='bordered'
-                        as={Link} href={href} radius='sm'
+                        as={Link} href={href + index} radius='sm'
                         className='group'
                         size='lg'
                         endContent={<ArrowRight width={23} className='group-hover:translate-x-3 group-hover:opacity-70 duration-250' />}

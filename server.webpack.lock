@@ -1,0 +1,7 @@
+{
+  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4": { "integrity": "sha512-5urvc69Lc52vfoh04fO4e00yD5VDR+kSxsuzP2hsQouUgyxG95KOnPaF4URS9aDjIJ7a5QGsIi+m6q59u7dIig==", "contentType": "video/mp4" },
+  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4": { "integrity": "sha512-ELEWZwzjMl4hHpemEF+bs19glxlyof6hIInz1l4vMwHsfdwfbswmqHl/1C4eJ4G2EUZOKWYuAFTk+qQKPex79g==", "contentType": "video/mp4" },
+  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4": { "integrity": "sha512-4L/37WnKD7MPIhtJqjoS0rBCvg5bT697cbw+Oyrk1GyO8S2K6BgSyLn5kgUycECE5LCxKFf/w4rtlpv/sS4JyA==", "contentType": "video/mp4" },
+  "https://www.mydomain.com/remote-video.mp4": { "resolved": "https://www.web.com/mydomain?brand=mydomain&channelID=P99C101S653N0B2A16D132E0000V147", "integrity": "sha512-nIBGMdnq0HDZ7hJ1W7FPT3whVO4EJ0F5JH4/nNxww78lj1n9zNRXXtsqsGHn5Y6uEd1uB+EEJowYv+y04+N1Sg==", "contentType": "text/html;charset=utf-8" },
+  "version": 1
+}

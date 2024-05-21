@@ -1,4 +1,5 @@
 import MovieCard from "@/ui/card";
+import { http } from "@/utils/http";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,7 +11,8 @@ export const metadata: Metadata = {
     siteName: "Home",
   }
 }
-export default function Home() {
+const Home = async () => {
+  // const data = await http.get('api/movies').then(res => res.data)
   return (
     <div>
       <h2 className="font-semibold text-center text-4xl pb-10">Movies</h2>
@@ -22,3 +24,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home

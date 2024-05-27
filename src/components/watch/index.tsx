@@ -24,7 +24,7 @@ const WatchPage = () => {
                 </div>
                 <div className='flex flex-wrap gap-3 py-2'>
                     {
-                        ['Jangovor', 'Fantastic']
+                        ['Action', 'Fantasy']
                             .map((item, index) =>
                                 <Chip key={index} color='primary' variant='bordered'>
                                     {item}

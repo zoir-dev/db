@@ -2,6 +2,7 @@
 import Video from 'next-video'
 import src from 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4'
 import { Chip } from '@nextui-org/react'
+import { rating } from '@/utils/rating'
 
 const WatchPage = () => {
 
@@ -16,7 +17,11 @@ const WatchPage = () => {
                 <p className='text-default-500 sm:text-lg'>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, fugiat unde, suscipit doloremque impedit recusandae a consectetur corrupti pariatur similique quibusdam necessitatibus quisquam reiciendis odit dicta qui officiis! Dolor recusandae vitae deleniti facere, tempore sint deserunt provident quo natus ratione rem totam, reiciendis minima eveniet ipsum fugiat qui iure harum?
                 </p>
-                <p className='text-default-500'>2023.01.01</p>
+                <div className='flex flex-col gap-2'>
+                    <p className='text-default-500'>• Andrew Tate</p>
+                    <p className='text-default-500'>• 2023</p>
+                    <div className='flex gap-1 text-default-500'>• {rating(3, 20)}</div>
+                </div>
                 <div className='flex flex-wrap gap-3 py-2'>
                     {
                         ['Jangovor', 'Fantastic']

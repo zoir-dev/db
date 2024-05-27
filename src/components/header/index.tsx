@@ -18,7 +18,7 @@ const Header = () => {
     }, [focused])
 
     const pathName = usePathname()
-    if (pathName === '/login') return null
+    if (pathName === '/login' || pathName === '/register') return null
     return (
         <header className="py-6 flex items-center justify-end relative">
             <div className={`${open && 'left-[240px] md:left-[220px]'} !z-[1000] absolute left-0 duration-500 xl:hidden`}>

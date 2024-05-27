@@ -2,17 +2,17 @@
 import Image from "next/image"
 import Link from "next/link"
 import logo from '@/assets/logo.png'
-import { Calendar, Heart, Home, LogIn, LogOut, MessageCircle, Settings, TrendingUp, Users } from "lucide-react"
+import { Calendar, Heart, Home, LogIn, LogOut, Settings, TrendingUp } from "lucide-react"
 import { usePathname } from "next/navigation"
 
 const SideBar = ({ drawer, onClose }: { drawer?: boolean, onClose?: () => void }) => {
     const pathName = usePathname()
-    const token = '1'
-    if (pathName === '/login') return null
+    const token = ''
+    if (pathName === '/login' || pathName === '/register') return null
     return (
         <div className={`max-w-xs w-full p-8 h-screen flex-col justify-between ${drawer ? 'flex h-full' : 'hidden xl:flex shadow-sidebar'}`}>
             <div>
-                <Link onClick={onClose} href='/'>
+                <Link onClick={onClose} href='/' onMouseEnter={() => console.log('qalesan')} onMouseOver={() => console.log(1)}>
                     <Image src={logo.src} alt="logo" width={120} height={50} />
                 </Link>
                 <div className="flex flex-col gap-4 pt-10">

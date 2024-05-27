@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const baseUrl = "https://sirojabdumavlonov.jprq.app/";
+
 export const http = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: baseUrl,
 });

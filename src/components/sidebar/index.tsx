@@ -1,9 +1,10 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import logo from '@/assets/logo.png'
+import logo from '@/assets/logo.svg'
 import { Calendar, Heart, Home, LogIn, LogOut, Settings, TrendingUp } from "lucide-react"
 import { usePathname } from "next/navigation"
+import {auto} from "@mux/mux-node/_shims/registry";
 
 const SideBar = ({ drawer, onClose }: { drawer?: boolean, onClose?: () => void }) => {
     const pathName = usePathname()
@@ -13,7 +14,7 @@ const SideBar = ({ drawer, onClose }: { drawer?: boolean, onClose?: () => void }
         <div className={`max-w-xs w-full p-8 h-screen flex-col justify-between ${drawer ? 'flex h-full' : 'hidden xl:flex shadow-sidebar'}`}>
             <div>
                 <Link onClick={onClose} href='/' onMouseEnter={() => console.log('qalesan')} onMouseOver={() => console.log(1)}>
-                    <Image src={logo.src} alt="logo" width={120} height={50} />
+                    <Image src={logo.src} alt="logo" width={160} height={60} />
                 </Link>
                 <div className="flex flex-col gap-4 pt-10">
                     {

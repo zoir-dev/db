@@ -8,6 +8,9 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+import Logo from "@/assets/logo.svg"
+import logo from "@/assets/logo.svg";
+import Image from "next/image";
 
 const Auth = ({ login }: { login?: boolean }) => {
     const [password, setPassword] = useState(false)
@@ -34,7 +37,12 @@ const Auth = ({ login }: { login?: boolean }) => {
     }
 
     return (
-        <div className="w-full py-6 overflow-y-auto h-[95vh] flex items-center justify-center">
+        <div className="w-full py-6 overflow-y-auto h-[95vh] flex flex-col items-center justify-center">
+            <div className="mb-7 hover:scale-105 transition duration-200">
+                <Link href='/'>
+                    <Image src={logo.src} alt="logo" width={160} height={60} />
+                </Link>
+            </div>
             <Card className="w-full max-w-[400px] dark:bg-gray-900">
                 <CardBody>
                     <h2 className="text-center font-semibold text-xl pb-4">{login ? "Login" : "Register"}</h2>
@@ -99,12 +107,12 @@ const Auth = ({ login }: { login?: boolean }) => {
                             isDisabled={loading}
                         />
                         <Button type="submit" color="primary" fullWidth radius="sm" isLoading={loading}>
-                            Kirish
+                            Login
                         </Button>
                     </form>
                     <p className="text-sm !font-normal">
                         {login ? "Don't have an account?" : "Already have an account?"}
-                        <Link href={login ? '/register' : '/login'} className="text-primary">
+                        <Link href={login ? '/register' : '/login'} className="px-2 text-primary">
                             {login ? 'Register' : 'Login'}
                         </Link>
                     </p>

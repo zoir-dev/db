@@ -25,7 +25,7 @@ const MovieCard = ({ href, index, liked }: { href: string, index: number, liked?
                     </p>
                     <div className='flex flex-wrap gap-3 py-2'>
                         {
-                            ['Jangovor', 'Fantastic']
+                            ['Action', 'Fantasy']
                                 .map((item, index) =>
                                     <Chip key={index} color='primary' variant='bordered'>
                                         {item}
